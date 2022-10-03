@@ -21,10 +21,13 @@ function onInput(e) {
 
 function onFormSubmit(e){
     e.preventDefault()
-    console.log(`Email => ${textEmail.value}`)
+    if (textEmail.value !== null && textArea.value !== null) {
+       console.log(`Email => ${textEmail.value}`)
     console.log(`Inputl => ${textArea.value}`)
     e.currentTarget.reset()    
-    localStorage.removeItem(STORAGE_KEY)
+    localStorage.removeItem(STORAGE_KEY) 
+    }
+    
    
 }
 
