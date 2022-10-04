@@ -16,4 +16,10 @@ const onPlay = function (data) {
 player.on('timeupdate', throttle(onPlay,1000));
 
  
- player.setCurrentTime(localStorage.getItem(VIDEOSTORAGE_KEY)) 
+
+    player.setCurrentTime(localStorage.getItem(VIDEOSTORAGE_KEY)).then(function(seconds) {
+    // seconds = the current playback position
+}).catch(function(error) {
+    // an error occurred
+});
+
